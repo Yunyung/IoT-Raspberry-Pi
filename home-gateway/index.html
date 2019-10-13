@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     <meta name="viewport" content="width=device-width">
+
+     <title>Voice Control</title>
+
+     <link rel="stylesheet" href="style.css">
+     <!--[if lt IE 9]>
+         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+     </head>
+
+     <body>
+         <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+         <!-- Firebase App is always required and must be first -->
+         <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+         <!-- Add additional services that you want to use -->
+         <!--  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script> -->
+         <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+         <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script> -->
+         <!-- <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script> -->
+         <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js"></script>
+         <!-- <script src="https://www.gstatic.com/firebase/5.3.0/firebase-storage.js"></script> -->
+         <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase/init.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDPAz2JmW8wqblFtHDHVINLiu7-QnOTXtM",
+    authDomain: "raspberry-smarthome-gateway.firebaseapp.com",
+    databaseURL: "https://raspberry-smarthome-gateway.firebaseio.com",
+    projectId: "raspberry-smarthome-gateway",
+    storageBucket: "raspberry-smarthome-gateway.appspot.com",
+    messagingSenderId: "757466247798"
+  };
+  firebase.initializeApp(config);
+</script>
+  
+    <h1><font size=24, color=Yellow>語音控制</font></h1>
+    <p><font size=24, color=Yellow>按鍵後啟用語音控制</font></p>
+
+    <button>語音控制</button>
+
+    <div>
+        <p class="output"><font size=32, color=Yellow>語音辨識結果</font></p>
+    </div>
+
+    <script src="VoiceControl.js"></script>
+  </body>
+</html>
